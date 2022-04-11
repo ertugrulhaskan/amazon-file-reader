@@ -1,24 +1,39 @@
 # amazon-file-reader
 
-## Project setup
+## Intended UI:
+
 ```
-npm install
+--------------------------------------------------
+| file-1.txt |                                   |
+| file-2.txt |                                   |
+|            |                                   |
+|            |                                   |
+|            |           Choose a file           |
+|            |                                   |
+|            |                                   |
+|            |                                   |
+|            |                                   |
+|            |                                   |
+--------------------------------------------------
 ```
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+Files API available for use (you can assume these are available in the global namespace or by importing from a module when using a packaging mechanism)
 ```
 
-### Lints and fixes files
+### getFiles():
+
 ```
-npm run lint
+Returns a Promise that resolves to an array of
+files:
+  [
+    "file-1.txt",
+    "file-2.txt"
+  ]
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### getFileContents(filename):
+
+```
+returns a Promise that resolves  to the file contents.
+```
